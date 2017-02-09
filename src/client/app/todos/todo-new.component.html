@@ -1,0 +1,8 @@
+<form name="todo-new" class="form-horizontal" (ngSubmit)="create()" #f="ngForm">
+  <div class="form-group">
+    <div class="col-md-12">
+      <input class="form-control" [(ngModel)]="todo.task" type="text" name="task" placeholder="What needs to be done ?">
+    </div>
+  </div>
+</form>
+

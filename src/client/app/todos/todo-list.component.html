@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="todos col-md-6 col-md-offset-3 well">
+      <app-todo-new></app-todo-new>
+      <hr>
+      <ul >
+        <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
+      </ul>
+
+      <app-todo-footer></app-todo-footer>
+    </div>
+  </div>
+</div>
+
+

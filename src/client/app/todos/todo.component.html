@@ -1,0 +1,23 @@
+<li [class.completed]="todo.completed">
+  <div class="row">
+    <div class="col-xs-2">
+      <input type="checkbox" name="completed"  [(ngModel)]="todo.completed">
+    </div>
+
+    <div class="col-xs-8">
+      <div *ngIf="isEditing">
+        <input type="text" name="task" [(ngModel)]="todo.task" (blur)="toggleEdit(false)">
+      </div>
+
+      <div *ngIf="!isEditing" (dblclick)="toggleEdit(true)" class="todo-task">
+        {{todo.task}}
+      </div>
+    </div>
+
+    <div class="col-xs-2">
+      <button class="btn btn-link text-danger" (click)="remove()" title="Remove">
+        <i class="fa fa-close"></i>
+      </button>
+    </div>
+  </div>
+</li>

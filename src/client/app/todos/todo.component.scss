@@ -1,0 +1,14 @@
+li {
+
+  background-color: #fff;
+
+  border: 1px solid $gray;
+
+  list-style: none;
+
+  &.completed {
+    .todo-task {
+      text-decoration: line-through;
+    }
+   }
+}
